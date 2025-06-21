@@ -9,7 +9,7 @@ canvas.height = 1080;
 const frameCount = 150; // The total number of frames you exported
 const currentFrame = (index) =>
     // Your image path format
-    `/videos/frames/frame-${index.toString().padStart(4, '0')}.jpg`;
+    `/frames/frame-${index.toString().padStart(4, '0')}.jpg`;
 // ^^ NOTE: Using an Apple URL as a live example. Replace with your own image path.
 // Example local path: `frames/frame-${index.toString().padStart(4, '0')}.jpg`
 
