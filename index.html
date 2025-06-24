@@ -9,7 +9,7 @@
   </head>
   <body class="bg-slate-800">
     <!-- <div class="w-screen h-screen fixed -z-10 pointer-events-none"> -->
-    <div class="pointer-events-none fixed inset-0 -z-50 opacity-30">
+    <div class="pointer-events-none fixed inset-0 -z-50 opacity-20">
       <canvas id="scrub-canvas" class="h-screen w-full object-cover"></canvas>
     </div>
     <div
@@ -19,25 +19,25 @@
       Loading... 0%
     </div>
 
-    <div id="blobs">
+    <div id="blobs" class="pointer-events-none">
       <div
-        class="absolute top-0 left-0 -z-10 h-96 w-96 rounded-full bg-violet-800 opacity-50 blur-3xl"
+        class="animate-float absolute top-0 left-0 -z-10 h-96 w-96 rounded-full bg-violet-900 blur-[100px]"
       ></div>
 
       <div
-        class="absolute top-1/2 left-1/4 -z-10 h-96 w-96 rounded-full bg-indigo-800 opacity-50 blur-3xl"
+        class="animate-float animation-delay-2000 absolute top-1/2 left-1/4 -z-10 h-96 w-96 rounded-full bg-indigo-900 blur-[100px]"
       ></div>
 
       <div
-        class="absolute top-full left-1/8 -z-10 h-96 w-96 rounded-full bg-indigo-800 opacity-50 blur-3xl"
+        class="animate-float animation-delay-4000 absolute top-full left-1/8 -z-10 h-96 w-96 rounded-full bg-indigo-900 blur-[100px]"
       ></div>
 
       <div
-        class="absolute top-[150%] left-0 -z-10 h-96 w-96 rounded-full bg-violet-800 opacity-50 blur-3xl"
+        class="animate-float animation-delay-6000 absolute top-[150%] left-0 -z-10 h-96 w-96 rounded-full bg-violet-900 blur-[100px]"
       ></div>
     </div>
 
-    <section class="mx-auto max-w-[1920px] outline-red-500 outline-dashed">
+    <section class="mx-auto max-w-[1920px]">
       <header></header>
       <main class="py-4 text-5xl text-blue-50">
         <div class="mb-60 space-y-4 px-4 pt-20 sm:pl-8">
@@ -69,7 +69,7 @@
           >
         </div>
 
-        <div class="mb-60 space-y-4 px-4 sm:pl-8 2xl:max-w-6xl">
+        <div class="mb-20 space-y-4 px-4 sm:pl-8 2xl:max-w-6xl">
           <span class="block text-6xl font-bold"
             >Animating in the Age of Spatial Computing</span
           >
