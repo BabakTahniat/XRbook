@@ -6,12 +6,10 @@ const loadingIndicator = document.getElementById('loading-indicator');
 canvas.width = 1920; // Set to your desired resolution
 canvas.height = 1080;
 
-const frameCount = 150; // The total number of frames you exported
+const frameCount = 192; // The total number of frames you exported
 const currentFrame = (index) =>
-    // Your image path format
+    //  image path format
     `/frames/frame-${index.toString().padStart(4, '0')}.jpg`;
-// ^^ NOTE: Using an Apple URL as a live example. Replace with your own image path.
-// Example local path: `frames/frame-${index.toString().padStart(4, '0')}.jpg`
 
 const images = [];
 const imageState = {
@@ -25,10 +23,10 @@ for (let i = 1; i <= frameCount; i++) {
     img.src = currentFrame(i);
     img.onload = () => {
         imagesLoaded++;
-        // const percent = Math.round((imagesLoaded / frameCount) * 100);
-        // loadingIndicator.textContent = `Loading... ${percent}%`;
+        const percent = Math.round((imagesLoaded / frameCount) * 100);
+        loadingIndicator.textContent = `Loading... ${percent}%`;
         if (imagesLoaded === frameCount) {
-            // loadingIndicator.style.display = 'none';
+            loadingIndicator.style.display = 'none';
             // Draw the first frame once all are loaded
             drawImage(0);
         }
@@ -61,4 +59,6 @@ const handleScroll = () => {
     requestAnimationFrame(() => drawImage(frameIndex));
 };
 
-window.addEventListener('scroll', handleScroll);
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('scroll', handleScroll);
+});

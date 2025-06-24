@@ -7,18 +7,79 @@
         <link rel="stylesheet" href="/src/css/main.css" />
         <title>XR book</title>
     </head>
-    <body>
-        <div class="w-screen h-screen fixed -z-10 pointer-events-none">
+    <body class="bg-slate-800">
+        <!-- <div class="w-screen h-screen fixed -z-10 pointer-events-none"> -->
+        <div class="fixed inset-0 -z-50 pointer-events-none opacity-30">
             <canvas
                 id="scrub-canvas"
-                class="w-full h-full object-cover"
+                class="w-full h-screen object-cover"
             ></canvas>
         </div>
-        <!-- <div id="loading-indicator">Loading... 0%</div> -->
+        <div
+            id="loading-indicator"
+            class="text-4xl font-bold absolute left-[50%] translate-x-[-50%] justify-center pt-16"
+        >
+            Loading... 0%
+        </div>
 
-        <header></header>
-        <main class="h-[2000px] text-blue-50 text-5xl">hello from vite</main>
-        <footer></footer>
+        <div id="blobs">
+            <div
+                class="absolute -z-10 w-96 h-96 bg-linear-to-r from-cyan-500 to-blue-500"
+            ></div>
+        </div>
+
+        <section class="max-w-[1920px] mx-auto outline-dashed outline-red-500">
+            <header></header>
+            <main class="py-4 text-blue-50 text-5xl">
+                <div class="px-4 space-y-4 mb-60 pt-20 sm:pl-8">
+                    <span class="block text-3xl">Welcome to the age of</span>
+                    <span class="block text-6xl font-bold"
+                        >Spatial Computing</span
+                    >
+                    <span class="block text-xl"
+                        >An era where computers no longer live behind
+                        screens.</span
+                    >
+                </div>
+
+                <div class="px-4 space-y-4 mb-60 sm:pl-16">
+                    <span class="block text-3xl">Through</span>
+                    <span class="block text-6xl font-bold"
+                        >Extended Realities</span
+                    >
+                    <span class="block text-xl font-bold"
+                        >Virtual Reality, Mixed Reality, Augmented Reality</span
+                    >
+                    <span class="block text-xl"
+                        >digital experiences now unfold in physical spaces</span
+                    >
+                </div>
+
+                <div class="px-4 space-y-4 mb-60">
+                    <span class="block text-6xl font-bold">Animating</span>
+                    <span class="block text-xl font-bold"
+                        >Becomes a spatial experience</span
+                    >
+                    <span class="block text-xl"
+                        >With XR, animation escapes the flat screen.</span
+                    >
+                </div>
+
+                <div class="px-4 space-y-4 mb-60 sm:pl-8 2xl:max-w-6xl">
+                    <span class="block text-6xl font-bold"
+                        >Animating in the Age of Spatial Computing</span
+                    >
+                    <span class="block text-xl"
+                        >This book offers a guide for animators and researchers
+                        navigating the evolving intersection of animation and
+                        extended reality. Combining theory, tools, and case
+                        studies, it charts the transformation of animation in
+                        the age of spatial computing.</span
+                    >
+                </div>
+            </main>
+            <footer></footer>
+        </section>
     </body>
     <script src="src/js/main.js"></script>
 </html>
